@@ -14,6 +14,10 @@
 </head>
 
 <body>
+    <div class="toast" id="toast">
+        <p class="toastMessage" id="toastMessage"></p>
+    </div>
+
     <header class="header">
         <div class="mainHeader">
             <div class="headerContainer">
@@ -39,8 +43,9 @@
 
                 <div class="sideLinks">
                     <div class="dropdown-wrapper">
-                        <a href="carrinho.html" class="dropdown-trigger" title="Carrinho">
+                        <a href="carrinho.html" class="dropdown-trigger" title="Carrinho" style="position: relative;">
                             <i class="fa-solid fa-cart-shopping"></i>
+                            <span class="cartBadge">0</span>
                         </a>
                         <div class="dropdown-content cart-dropdown">
                             <div class="dropdown-header">Itens Recentes</div>

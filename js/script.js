@@ -1,3 +1,16 @@
+//================= Lógica para o toast de notificações ==================
+function showToast(message){
+    const toast = document.getElementById('toast');
+    const toastMessage = document.getElementById('toastMessage');
+
+    toastMessage.textContent = message;
+    toast.classList.add('show');
+
+    setTimeout(() => {
+        toast.classList.remove('show');
+    }, 3000);
+}
+
 //================= Lógica para o carrossel de imagens ==================
 const track = document.getElementById('carouselTrack');
 const prevButton = document.getElementById('prevBtn');
@@ -36,7 +49,7 @@ if (prevButton) {
     });
 }
 
-// Auto-play a cada 5 segundos apenas se o botão existir (index.html)
+// Auto-play a cada 5 segundos apenas se o botão existir
 if (nextButton) {
     setInterval(() => {
         nextButton.click();
@@ -54,6 +67,14 @@ function saveCart(){
         renderCartPage();
     }
     
+    // Atualiza o número total de itens no ícone do carrinho no header
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const cartBadge = document.querySelector('.cartBadge');
+    if(cartBadge) {
+        cartBadge.textContent = totalItems;
+        cartBadge.style.display = totalItems > 0 ? 'flex' : 'none';
+    }
+
     updateHeaderCartDropdown();
 }
 
@@ -76,10 +97,10 @@ function addToCart(id, name, price, description){
         cart.push(item);
     }
     saveCart();
-    alert(`${name} adicionado ao carrinho!`);
+    showToast(`${name} adicionado ao carrinho!`);
 }
 
-// Listener CORRIGIDO para os botões "Adicionar ao Carrinho" (suporta clique no ícone)
+// Listener para os botões "Adicionar ao Carrinho"
 document.addEventListener('click', (e) => {
     const btn = e.target.closest('.btnAddToCart');
     if (btn){
@@ -141,7 +162,7 @@ function renderCartPage(){
     updateSummary(totalItems, totalPrice);
 }
 
-// Função CORRIGIDA e segura para atualizar o resumo do carrinho
+// Função para atualizar o resumo do carrinho
 function updateSummary(totalItems, totalPrice){
     const finalPriceElement = document.querySelector('.finalPrice');
     if(!finalPriceElement) return;
@@ -159,7 +180,7 @@ function updateSummary(totalItems, totalPrice){
     finalPriceElement.textContent = `R$ ${totalPrice.toFixed(2).replace('.', ',')}`;
 }
 
-// Função para atualizar o Dropdown do Header com limite de até 2 itens reais
+// Função para atualizar o Dropdown do Header com limite de até 2 itens
 function updateHeaderCartDropdown() {
     const previewList = document.querySelector('.cart-preview-list');
     if (!previewList) return;
@@ -185,6 +206,14 @@ function updateHeaderCartDropdown() {
         `;
         previewList.appendChild(li);
     });
+
+    // Icone que mostra o número total de itens no carrinho
+    const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+    const cartBadge = document.querySelector('.cartBadge');
+    if(cartBadge) {
+        cartBadge.textContent = totalItems;
+        cartBadge.style.display = totalItems > 0 ? 'flex' : 'none';
+    }
 }
 
 // Listener para mudanças na quantidade dos itens nas caixas de input
@@ -201,7 +230,7 @@ document.addEventListener('change', (e) => {
     }
 });
 
-// Listener CORRIGIDO para remover itens individuais ou limpar tudo
+// Listener para remover itens individuais ou limpar tudo
 document.addEventListener('click', (e) => {
     const removeBtn = e.target.closest('.btnRemoveItem');
     if (removeBtn){
@@ -278,6 +307,7 @@ const PRODUTOS_DB = [
     { id: "cup-limao", name: "Cupcake Limão", price: 12.00, description: "Recheio cítrico refrescante de limão siciliano.", category: "cupcakes" }
 ];
 
+// Renderiza a página de produtos (pesquisa ou catálogo)
 function renderizarPaginaCatalogo() {
     const catalogGrid = document.getElementById('catalogGrid');
     const pageTitle = document.getElementById('pageTitle');
@@ -333,4 +363,25 @@ function renderizarPaginaCatalogo() {
         `;
         catalogGrid.appendChild(card);
     });
+
 }
+
+//================= Simulação de finalização de compra (apenas para demonstração) ==================
+document.addEventListener('click', (e) => {
+    const checkoutBtn = e.target.closest('.btnProceedCheckout');
+
+    if (checkoutBtn){
+        // Verifica se o carrinho está vazio antes de finalizar a compra
+        if (cart.length === 0){
+            showToast('Seu carrinho está vazio! Adicione itens antes de finalizar a compra. 🍰');
+            return;
+        }
+
+        // Mensagem de agradecimento e simulação de finalização
+        alert('Compra finalizada com sucesso! Obrigado por escolher a Flor do Norte! 🌸');
+
+        // Finaliza a compra limpando o carrinho
+        cart = [];
+        saveCart();
+    }
+});
