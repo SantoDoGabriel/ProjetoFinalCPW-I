@@ -1,9 +1,9 @@
 :root {
-    --main-color: rgb(25, 87, 25);          /* Cor principal */
-    --sub-menu-color: rgb(30, 66, 35);      /* Tom dos botões de categoria */
+    --main-color: rgb(233, 224, 220);          /* Cor principal */
+    --sub-menu-color: rgb(228, 195, 154);      /* Tom dos botões de categoria */
     --bg-light: rgb(255, 245, 245);            /* Fundo da página */
-    --text-color: rgb(245, 180, 0);
-    --placeholder-bg: rgb(255, 235, 238);
+    --text-color: rgb(148, 93, 25);
+    --placeholder-bg: rgb(244, 234, 235);
 }
 
 * {
@@ -78,7 +78,6 @@ a{
 .logoPlaceholder {
     height: 60px;
     width: 60px;
-    background: var(--text-color);
     color: var(--main-color);
     border-radius: 50%;
     display: flex;
@@ -89,8 +88,10 @@ a{
 }
 
 .brandName h2 {
-    font-size: 1.4rem;
+    font-size: 2.2rem;
     line-height: 1.2;
+    font-family: 'MonteCarlo', cursive;
+    font-weight: 100;
 }
 
 .brandName h4 {
@@ -168,7 +169,7 @@ a{
     position: absolute;
     top: 100%;
     right: 0;
-    background: rgba(245, 180, 0, 0.7);
+    background: rgba(228, 195, 154, 0.7);
     border-bottom: 1px solid rgb(255, 236, 183);
     border-radius: 16px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -302,7 +303,7 @@ a{
 .dropdown-btn {
     display: block;
     width: 100%;
-    background-color: var(--main-color);
+    background-color: var(--text-color);
     color: var(--placeholder-bg);
     text-align: center;
     padding: 10px;
@@ -315,7 +316,7 @@ a{
 }
 
 #register-btn {
-    color: var(--main-color);
+    color: var(--text-color);
     border: 2px solid var(--main-color);
     border-radius: 10px;
     background: transparent;
@@ -324,7 +325,7 @@ a{
 
 #cart-visualize {
     background-color: transparent;
-    color: var(--main-color);
+    color: var(--text-color);
     border: 2px solid var(--main-color);
     border-radius: 10px;
     font-size: 0.85rem;
@@ -359,7 +360,7 @@ a{
     gap: 15px;
     padding: 12px 10px;
     flex-wrap: wrap;
-    background: rgba(74, 143, 83, 0.3);
+    background: rgba(216, 203, 203, 0.3);
     backdrop-filter: blur(5px);
     border-bottom: 1px solid rgba(189, 243, 139, 0.2);
 }
@@ -723,13 +724,15 @@ a{
     max-width: 1200px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
     align-items: center;
+    height: 100vh;
+    margin: auto;
 }
 
 .registrationForm {
-    background: rgba(74, 143, 83, 0.3);
+    background: rgba(228, 195, 154, 0.3);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(189, 243, 139, 0.2);
     padding: 20px;
@@ -746,7 +749,7 @@ a{
 .formGroup label {
     display: block;
     margin-bottom: 5px;
-    color: var(--main-color);
+    color: var(--text-color);
     font-weight: 600;
 }
 
