@@ -11,7 +11,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=MonteCarlo&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=MonteCarlo&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -25,11 +27,11 @@
                 <div class="headerLogoAndText">
                     <a href="index.html">
                         <div class="logoPlaceholder">
-                            <img src="./images/Logo/FlorCactoLogo.png" style="width: 50px; height: 50px;" alt="">
+                            <img src="./images/Logo/LogoPng.png" style="width: 50px; height: 50px;" alt="">
                         </div>
                         <div class="brandName">
-                            <h2>Flor do Norte</h2>
-                            <h4>Confeitaria Boutique</h4>
+                            <h1>Flor do Norte</h1>
+                            <h2>Confeitaria Boutique</h2>
                         </div>
                     </a>
                 </div>
@@ -40,7 +42,7 @@
                 </div>
 
                 <div class="addressInfo">
-                    <span><i class="fa-solid fa-phone"></i> (51) 99999-9999</span>  
+                    <span><i class="fa-solid fa-phone"></i> (51) 99999-9999</span>
                 </div>
 
                 <div class="sideLinks">
@@ -102,31 +104,36 @@
     </header>
 
     <nav class="subHeader">
-        <a href="#bolos">Categoria 1</a>
-        <a href="#cupcakes">Categoria 2</a>
-        <a href="#">Categoria 3</a>
-        <a href="#">Categoria 4</a>
-        <a href="#">Categoria 5</a>
-        <a href="#">Categoria 6</a>
+        <a href="#bombom">Bombons</a>
+        <a href="#doceDePote">Doces de Pote</a>
+        <a href="#perfumarias">Perfumarias</a>
+        <a href="#cafezinho">Cafézinho</a>
+        <a href="#cestas">Cestas</a>
+        <a href="#sobremesas">Sobremesas</a>
     </nav>
 
     <main class="main">
         <section class="carouselSection">
+            <h2 style="display: none;">Carrosel Funcional</h2>
             <div class="carouselContainer">
                 <button class="carouselBtn prevBtn" id="prevBtn"><i class="fa-solid fa-chevron-left"></i></button>
                 <button class="carouselBtn nextBtn" id="nextBtn"><i class="fa-solid fa-chevron-right"></i></button>
 
                 <div class="carouselTrack" id="carouselTrack">
                     <div class="carouselSlide">
-                        <img src="./images/Carousel/BoloMorango2.jpg" alt="Bolo de morango">
+                        <img src="./images/Carousel/Fatia-de-torta-paraense.png" alt="Fatia de torta paraense">
                     </div>
 
                     <div class="carouselSlide">
-                        <img src="./images/Carousel/doces-italianos.jpg.jpg" alt="Bolo de morango">
+                        <img src="./images/Carousel/Doce-de-buriti.png" alt="Doce de buriti">
                     </div>
 
                     <div class="carouselSlide">
-                        <img src="./images/Carousel/docinhos-gourmet.png" alt="Bolo de morango">
+                        <img src="./images/Carousel/Cesta-noite-amazonica.png" alt="Cesta noite amazonica">
+                    </div>
+
+                    <div class="carouselSlide">
+                        <img src="./images/Carousel/Mousse-de-cupuaçu.png" alt="Mousse de cupuaçu">
                     </div>
                 </div>
 
@@ -134,70 +141,316 @@
         </section>
 
         <div class="productsArea">
-            <section id="bolos" class="productsSection">
+            <section id="bombom" class="productsSection">
                 <div class="sectionTitleArea">
-                    <h2 class="sectionTitle">Bolos Artesanais</h2>
-                    <a href="produtos.html?categoria=bolos" class="seeAllLink">Ver todos <i class="fa-solid fa-arrow-right"></i></a>
+                    <h2 class="sectionTitle">Bombons Artesanais</h2>
+                    <a href="produtos.html?categoria=bombom" class="seeAllLink">Ver todos <i
+                            class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
                 <div class="productsContainer">
                     <div class="productCard">
-                        <div class="productImagePlaceholder">Bolo Red Velvet</div>
-                        <button class="btnAddToCart" data-id="bolo-red-velvet" data-name="Bolo Red Velvet"
-                            data-price="85.00" data-description="Bolo de red velvet com cobertura de chantilly"><i
+                        <div class="productCardImage">
+                            <img src="./images/Produtos/Bombom-cupuacu.png" alt="Bombom de Cupuaçu Artesanal"
+                                class="productImg" title="Bombom de Cupuaçu Artesanal">
+                        </div>
+                        <p>Bombom de Cupuaçu</p>
+                        <button class="btnAddToCart" data-id="bombom-cupuacu" data-name="Bombom de Cupuaçu Artesanal"
+                            data-price="10.00"
+                            data-description="Recheio cremoso e azedinho de polpa pura, coberto com casquinha de chocolate meio amargo."><i
                                 class="fa-solid fa-cart-shopping"></i> Adicionar ao Carrinho</button>
                     </div>
                     <div class="productCard">
-                        <div class="productImagePlaceholder">Bolo de Chocolate</div>
-                        <button class="btnAddToCart" data-id="bolo-chocolate" data-name="Bolo de Chocolate"
-                            data-price="75.00" data-description="Bolo de chocolate com recheio de ganache"><i
+                        <div class="productCardImage">
+                            <img src="./images/Produtos/bombom-bacuri.png" alt="Bombom de Bacuri Fino"
+                                class="productImg" title="Bombom de Bacuri Fino">
+                        </div>
+                        <p>Bombom de Bacuri Fino</p>
+                        <button class="btnAddToCart" data-id="bombom-bacuri-fino" data-name="Bombom de Bacuri Fino"
+                            data-price="11.50"
+                            data-description="Casca de chocolate ao leite recheada com a raríssima e perfumada polpa de bacuri selvagem."><i
                                 class="fa-solid fa-cart-shopping"></i> Adicionar ao Carrinho</button>
                     </div>
                     <div class="productCard">
-                        <div class="productImagePlaceholder">Bolo de Cenoura</div>
-                        <button class="btnAddToCart" data-id="bolo-cenoura" data-name="Bolo de Cenoura"
-                            data-price="65.00" data-description="Bolo de cenoura com cobertura de cream cheese"><i
+                        <div class="productCardImage">
+                            <img src="./images/Produtos/bombom-castanha-para.png" alt="Bombom de Castanha do Pará"
+                                class="productImg" title="Bombom de Castanha do Pará">
+                        </div>
+                        <p>Bombom de Castanha do Pará</p>
+                        <button class="btnAddToCart" data-id="bombom-castanha-para-fondant"
+                            data-name="Bombom de Castanha-do-Pará no Fondant" data-price="10.00"
+                            data-description="Uma castanha inteira tostada e crocante, envolvida em açúcar fondant e cobertura de chocolate blend."><i
                                 class="fa-solid fa-cart-shopping"></i> Adicionar ao Carrinho</button>
                     </div>
                     <div class="productCard">
-                        <div class="productImagePlaceholder">Bolo de Morango</div>
-                        <button class="btnAddToCart" data-id="bolo-morango" data-name="Bolo de Morango"
-                            data-price="80.00" data-description="Bolo de morango com recheio de creme de morango"><i
+                        <div class="productCardImage">
+                            <img src="./images/Produtos/bombons-sortidos-floresta.png" alt="Caixa de Bombons Sortidos da Floresta (12 unid.)"
+                                class="productImg" title="Caixa de Bombons Sortidos da Floresta (12 unid.)">
+                        </div>
+                        <p>Caixa de Bombons Sortidos da Floresta (12 unid.)</p>
+                        <button class="btnAddToCart" data-id="caixa-bombons-sortidos"
+                            data-name="Caixa de Bombons Sortidos da Floresta (12 unid.)" data-price="110.00"
+                            data-description="Caixa decorada contendo um mix com 4 bombons de cupuaçu, 4 de bacuri e 4 de castanha."><i
                                 class="fa-solid fa-cart-shopping"></i> Adicionar ao Carrinho</button>
                     </div>
                     <button class="vitrineNextBtn"><i class="fa-solid fa-chevron-right"></i></button>
                 </div>
             </section>
 
-            <section id="cupcakes" class="productsSection">
+            <section id="doceDePote" class="productsSection">
                 <div class="sectionTitleArea">
-                    <h2 class="sectionTitle">Cupcakes Boutique</h2>
-                    <a href="produtos.html?categoria=cupcakes" class="seeAllLink">Ver todos <i class="fa-solid fa-arrow-right"></i></a>
+                    <h2 class="sectionTitle">Doces de Pote</h2>
+                    <a href="produtos.html?categoria=doceDePote" class="seeAllLink">Ver todos <i
+                            class="fa-solid fa-arrow-right"></i></a>
                 </div>
 
                 <div class="productsContainer">
                     <div class="productCard">
-                        <div class="productImagePlaceholder">Cupcake Baunilha</div>
-                        <button class="btnAddToCart" data-id="cupcake-baunilha" data-name="Cupcake Baunilha"
-                            data-price="12.00" data-description="Cupcake de baunilha com cobertura de chantilly"><i
+                        <div class="productCardImage">
+                            <img src="./images/Produtos/doce-de-cupuacu-pastoso.png" alt="Doce de Cupuaçu em Pasta Tradicional (260g)" class="productImg"
+                                title="Doce de Cupuaçu em Pasta Tradicional (260g)">
+                        </div>
+                        <p>Doce de Cupuaçu em Pasta Tradicional (260g)</p>
+                        <button class="btnAddToCart" data-id="doce-cupuacu-pasta"
+                            data-name="Doce de Cupuaçu em Pasta Tradicional (260g)" data-price="57.90"
+                            data-description="Cozimento lento da fruta com açúcar na medida certa. Textura densa ideal para comer com queijo ou de colher."><i
                                 class="fa-solid fa-cart-shopping"></i> Adicionar ao Carrinho</button>
                     </div>
                     <div class="productCard">
-                        <div class="productImagePlaceholder">Cupcake Nozes</div>
-                        <button class="btnAddToCart" data-id="cupcake-nozes" data-name="Cupcake Nozes"
-                            data-price="15.00" data-description="Cupcake de nozes com recheio de creme"><i
+                        <div class="productCardImage">
+                            <img src="./images/Produtos/doce-de-buriti.png" alt="Doce de Buriti" class="productImg"
+                                title="Doce de Buriti">
+                        </div>
+                        <p>Doce Pastoso de Buriti</p>
+                        <button class="btnAddToCart" data-id="doce-pastoso-buriti"
+                            data-name="Doce Pastoso de Buriti (250g)" data-price="48.00"
+                            data-description="Doce encorpado feito com a polpa da palmeira de buriti. Cor alaranjada linda e sabor denso e tropical."><i
                                 class="fa-solid fa-cart-shopping"></i> Adicionar ao Carrinho</button>
                     </div>
                     <div class="productCard">
-                        <div class="productImagePlaceholder">Cupcake Ovomaltine</div>
-                        <button class="btnAddToCart" data-id="cupcake-ovomaltine" data-name="Cupcake Ovomaltine"
-                            data-price="14.00" data-description="Cupcake de ovomaltine com cobertura de chocolate"><i
+                        <div class="productCardImage">
+                            <img src="./images/Produtos/geleia-taperebá.png" alt="Geleia de Taperebá" class="productImg"
+                                title="Geleia de Taperebá">
+                        </div>
+                        <p>Geleia de Taperebá</p>
+                        <button class="btnAddToCart" data-id="geleia-tapereba-caja"
+                            data-name="Geleia de Taperebá / Cajá Manioca (130g)" data-price="29.90"
+                            data-description="Geleia brilhante e de acidez equilibrada, perfeita para torradas e harmonização com queijos fortes."><i
                                 class="fa-solid fa-cart-shopping"></i> Adicionar ao Carrinho</button>
                     </div>
                     <div class="productCard">
-                        <div class="productImagePlaceholder">Cupcake Limão</div>
-                        <button class="btnAddToCart" data-id="cupcake-limao" data-name="Cupcake Limão"
-                            data-price="13.00" data-description="Cupcake de limão com recheio de creme de limão"><i
+                        <div class="productCardImage">
+                            <img src="./images/Produtos/geleia-cpuacu-pimenta-cheiro.png" alt="Geleia de Cupuaçu com Cheiro Pimenta" class="productImg"
+                                title="Geleia de Cupuaçu com Cheiro Pimenta">
+                        </div>
+                        <p>Geleia de Cupuaçu com Cheiro Pimenta</p>
+                        <button class="btnAddToCart" data-id="geleia-tucupi-pimenta"
+                            data-name="Geleia Agridoce de Tucupi com Pimenta (150g)" data-price="34.99"
+                            data-description="Redução do sumo da mandioca brava (tucupi) com pimentas regionais, criando um contraste doce-picante incrível."><i
+                                class="fa-solid fa-cart-shopping"></i> Adicionar ao Carrinho</button>
+                    </div>
+                    <button class="vitrineNextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </section>
+
+            <section id="perfumarias" class="productsSection">
+                <div class="sectionTitleArea">
+                    <h2 class="sectionTitle">Perfumaria</h2>
+                    <a href="produtos.html?categoria=perfumarias" class="seeAllLink">Ver todos <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="productsContainer">
+                    <div class="productCard">
+                        <div class="productCardImage">
+                            <img src="./images/Produtos/chocolate-branco-cumaru.png" alt="Chocolate Branco com Cumaru"
+                                class="productImg" title="Chocolate Branco com Cumaru">
+                        </div>
+                        <p>Chocolate Branco com Cumaru</p>
+                        <button class="btnAddToCart" data-id="choc-branco-cumaru"
+                            data-name="Chocolate Branco com Cumaru Gaudens (70g)" data-price="39.00"
+                            data-description="Chocolate branco nobre aromatizado com as sementes de cumaru, a baunilha da Amazônia."><i
+                                class="fa-solid fa-cart-shopping"></i> Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="productCard">
+                       <div class="productCardImage">
+                            <img src="./images/Produtos/chocolate-intenso-puxuri.png" alt="Chocolate intenso Priprioca"
+                                class="productImg" title="Chocolate intenso Priprioca">
+                        </div>
+                        <p>Chocolate intenso Priprioca</p>
+                        <button class="btnAddToCart" data-id="choc-intenso-priprioca"
+                            data-name="Chocolate Intenso com Priprioca 65% (70g)" data-price="41.90"
+                            data-description="Cacau selvagem nativo combinado com as notas amadeiradas e raras da raiz de priprioca."><i
+                                class="fa-solid fa-cart-shopping"></i> Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="productCard">
+                       <div class="productCardImage">
+                            <img src="./images/Produtos/chocolate-crisp-acai.png" alt="Chocolate ao Leite 52% com Açaí e Castanha"
+                                class="productImg" title="Chocolate ao Leite 52% com Açaí e Castanha">
+                        </div>
+                        <p>Chocolate ao Leite 52% com Açaí e Castanha</p>
+                        <button class="btnAddToCart" data-id="choc-leite-acai-castanha"
+                            data-name="Chocolate ao Leite 52% com Açaí e Castanha (70g)" data-price="41.90"
+                            data-description="A união da cremosidade do leite, a crocância da castanha e os flocos desidratados de açaí."><i
+                                class="fa-solid fa-cart-shopping"></i> Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="productCard">
+                       <div class="productCardImage">
+                            <img src="./images/Produtos/cripioca-leite-cupuacu-gaudens.png" alt="Cripioca ao Leite com Cupuaçu Gaudens (70g)"
+                                class="productImg" title="Cripioca ao Leite com Cupuaçu Gaudens (70g)">
+                        </div>
+                        <p>Cripioca ao Leite com Cupuaçu Gaudens (70g)</p>
+                        <button class="btnAddToCart" data-id="cripioca-leite-cupuacu"
+                            data-name="Cripioca ao Leite com Cupuaçu Gaudens (70g)" data-price="45.00"
+                            data-description="Flocos crocantes de tapioca envoltos em chocolate ao leite 53% com toque azedinho de cupuaçu."><i
+                                class="fa-solid fa-cart-shopping"></i> Adicionar ao Carrinho</button>
+                    </div>
+                    <button class="vitrineNextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </section>
+
+            <section id="cafezinho" class="productsSection">
+                <div class="sectionTitleArea">
+                    <h2 class="sectionTitle">Cafézinho</h2>
+                    <a href="produtos.html?categoria=cafezinho" class="seeAllLink">Ver todos <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="productsContainer">
+                    <div class="productCard">
+                        <div class="productCardImage">
+                            <img src="./images/Produtos/biscoito-castanha-para.png" alt="Biscoito de Castanha do Pará"
+                                class="productImg" title="Biscoito de Castanha do Pará">
+                        </div>
+                        <p>Biscoito de Castanha do Pará</p>
+                        <button class="btnAddToCart" data-id="biscoito-rosca-castanha"
+                            data-name="Biscoito Rosca de Castanha-do-Pará (50g)" data-price="20.00"
+                            data-description="Sequilhos artesanais e amanteigados produzidos com alta porcentagem de farinha de castanha pura."><i
+                                class="fa-solid fa-cart-shopping"></i> Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="productCard">
+                        <div class="productCardImage">
+                            <img src="./images/Produtos/castanhas-glaciadas-mel-abelha-nativa.png" alt="Castanhas Glaciadas com Mel de Abelha Nativa (100g)"
+                                class="productImg" title="Castanhas Glaciadas com Mel de Abelha Nativa (100g)">
+                        </div>
+                        <p>Castanhas Glaciadas com Mel de Abelha Nativa (100g)</p>
+                        <button class="btnAddToCart" data-id="castanhas-glaciadas-mel"
+                            data-name="Castanhas Glaciadas com Mel de Abelha Nativa (100g)" data-price="38.00"
+                            data-description="Castanhas inteiras e assadas, caramelizadas com o delicado mel de abelhas sem ferrão da região."><i
+                                class="fa-solid fa-cart-shopping"></i> Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="productCard">
+                        <div class="productCardImage">
+                            <img src="./images/Produtos/beiju-tapioca-doce-coco.png" alt="Beiju de Tapioca Doce com Coco (100g)"
+                                class="productImg" title="Beiju de Tapioca Doce com Coco (100g)">
+                        </div>
+                        <p>Beiju de Tapioca Doce com Coco (100g)</p>
+                        <button class="btnAddToCart" data-id="beiju-tapioca-coco"
+                            data-name="Beiju de Tapioca Doce com Coco (100g)" data-price="18.00"
+                            data-description="Discos finíssimos e crocantes de tapioca hidratada, tostados na chapa com raspas de coco seco."><i
+                                class="fa-solid fa-cart-shopping"></i> Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="productCard">
+                        <div class="productCardImage">
+                            <img src="./images/Produtos/granola-tapioca-amazonia.png" alt="Granola de Tapioca da Amazônia (200g)"
+                                class="productImg" title="Granola de Tapioca da Amazônia (200g)">
+                        </div>
+                        <p>Granola de Tapioca da Amazônia (200g)</p>
+                        <button class="btnAddToCart" data-id="granola-tapioca-amazonia"
+                            data-name="Granola de Tapioca da Amazônia (200g)" data-price="32.90"
+                            data-description="Mix crocante de tapioca flocada, castanhas quebradas e nibs de cacau nativo."><i
+                                class="fa-solid fa-cart-shopping"></i> Adicionar ao Carrinho</button>
+                    </div>
+                    <button class="vitrineNextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </section>
+
+            <section id="cestas" class="productsSection">
+                <div class="sectionTitleArea">
+                    <h2 class="sectionTitle">Cestas</h2>
+                    <a href="produtos.html?categoria=cestas" class="seeAllLink">Ver todos <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="productsContainer">
+                    <div class="productCard">
+                        <div class="productCardImage">
+                            <img src="./images/Produtos/cesta-cafe-ver-o-peso.png" alt=""Cesta Café no Ver-o-Peso"
+                                class="productImg" title=""Cesta Café no Ver-o-Peso">
+                        </div>
+                        <p>"Cesta Café no Ver-o-Peso</p>
+                        <button class="btnAddToCart" data-id="cesta-cafe-ver-o-peso"
+                            data-name="Cesta Café no Ver-o-Peso" data-price="165.00"
+                            data-description="Contém: 1 pacote de Café Artesanal, 1 Pote de Doce de Cupuaçu (260g), 1 pacote de Sequilhos de Castanha e 1 pacote de Farinha de Tapioca Flocada."><i
+                                class="fa-solid fa-cart-shopping"></i> Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="productCard">
+                        <div class="productCardImage">
+                            <img src="./images/Produtos/cesta-noite-amazonica.png" alt="Cesta Noite Amazônica"
+                                class="productImg" title="Cesta Noite Amazônica">
+                        </div>
+                        <p>Cesta Noite Amazônica</p>
+                        <button class="btnAddToCart" data-id="cesta-noite-amazonica" data-name="Cesta Noite Amazônica"
+                            data-price="220.00"
+                            data-description="Contém: 1 garrafa de Licor de Jambu (275ml), 1 Caixa de Bombons finos e 1 barra de Chocolate Intenso com Cumaru."><i
+                                class="fa-solid fa-cart-shopping"></i> Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="productCard">
+                        <div class="productImagePlaceholder">Cesta "Tesouros da Floresta" (Premium)</div>
+                        <button class="btnAddToCart" data-id="cesta-tesouros-floresta"
+                            data-name="Cesta Tesouros da Floresta (Premium)" data-price="390.00"
+                            data-description="Contém: 1 Vinho de Açaí (750ml), 1 Geleia de Taperebá, 1 Pote de Castanhas Glaciadas, 1 Barra Gaudens de Cumaru e 1 Cuia Amazônica artesanal."><i
+                                class="fa-solid fa-cart-shopping"></i> Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="productCard">
+                        <div class="productImagePlaceholder">Mini Cesta "Mimos do Norte"</div>
+                        <button class="btnAddToCart" data-id="mini-cesta-mimos-norte"
+                            data-name="Mini Cesta Mimos do Norte" data-price="85.00"
+                            data-description="Contém: 1 Pote de Geleia de Cupuaçu (150g), 1 pacote de Biscoito de Castanha (50g) e 3 Bombons artesanais sortidos."><i
+                                class="fa-solid fa-cart-shopping"></i> Adicionar ao Carrinho</button>
+                    </div>
+                    <button class="vitrineNextBtn"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </section>
+
+            <section id="sobremesas" class="productsSection">
+                <div class="sectionTitleArea">
+                    <h2 class="sectionTitle">Sobremesas</h2>
+                    <a href="produtos.html?categoria=sobremesas" class="seeAllLink">Ver todos <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+
+                <div class="productsContainer">
+                    <div class="productCard">
+                        <div class="productCardImage">
+                            <img src="./images/Produtos/fatia-de-torta-paraense.png" alt="Fatia de Torta Paraense"
+                                class="productImg" title="Fatia de Torta Paraense">
+                        </div>
+                        <p>Fatia de Torta Paraense</p>
+                        <button class="btnAddToCart" data-id="torta-paraense-fatia" data-name="Torta Paraense (Fatia)"
+                            data-price="24.00"
+                            data-description="Camadas de pão de ló intercaladas com creme aveludado de cupuaçu e cobertura generosa de castanhas trituradas."><i
+                                class="fa-solid fa-cart-shopping"></i> Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="productCard">
+                        <div class="productImagePlaceholder">Crepe "Casamento Perfeito"</div>
+                        <button class="btnAddToCart" data-id="crepe-casamento-perfeito"
+                            data-name="Crepe Casamento Perfeito" data-price="28.00"
+                            data-description="Crepe francês recheado com creme de cupuaçu artesanal e ganache de brigadeiro de cacau 54%."><i
+                                class="fa-solid fa-cart-shopping"></i> Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="productCard">
+                        <div class="productImagePlaceholder">Taça "Cupuaçu com Brigadeiro de Cumaru"</div>
+                        <button class="btnAddToCart" data-id="taca-cupuacu-cumaru"
+                            data-name="Taça Cupuaçu com Brigadeiro de Cumaru" data-price="22.00"
+                            data-description="Camadas intercaladas de mousse ácida de cupuaçu e brigadeiro cremoso aromatizado com semente de cumaru."><i
+                                class="fa-solid fa-cart-shopping"></i> Adicionar ao Carrinho</button>
+                    </div>
+                    <div class="productCard">
+                        <div class="productImagePlaceholder">Sorvete Artesanal de Tapioca com Calda de Açaí</div>
+                        <button class="btnAddToCart" data-id="sorvete-tapioca-acai"
+                            data-name="Sorvete Artesanal de Tapioca com Calda de Açaí" data-price="26.00"
+                            data-description="Duas bolas de sorvete de massa feito com pedacinhos de tapioca, cobertos por calda morna e densa de açaí puro."><i
                                 class="fa-solid fa-cart-shopping"></i> Adicionar ao Carrinho</button>
                     </div>
                     <button class="vitrineNextBtn"><i class="fa-solid fa-chevron-right"></i></button>
@@ -221,7 +474,9 @@
                     <a href="#"><i class="fa-brands fa-twitter"></i></a>
                 </div>
             </div>
-            <p style="text-align: center;">Made with <i class="fa-solid fa-heart"></i> in Brazil</p>
+            <p style="text-align: center;">Made with <i class="fa-solid fa-heart"></i> by Gabriel Santos & Vanessa
+                Castro</p>
+        </div>
     </footer>
 
     <script src="js/script.js"></script>

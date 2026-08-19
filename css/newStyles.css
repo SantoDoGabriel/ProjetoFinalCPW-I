@@ -1,7 +1,7 @@
 :root {
-    --main-color: rgb(233, 224, 220);          /* Cor principal */
-    --sub-menu-color: rgb(228, 195, 154);      /* Tom dos botões de categoria */
-    --bg-light: rgb(255, 245, 245);            /* Fundo da página */
+    --main-color: rgb(211, 203, 194);          /* Cor principal */
+    --sub-menu-color: rgb(224, 178, 121);      /* Tom dos botões de categoria */
+    --bg-light: rgb(236, 236, 236);            /* Fundo da página */
     --text-color: rgb(148, 93, 25);
     --placeholder-bg: rgb(244, 234, 235);
 }
@@ -87,14 +87,14 @@ a{
     font-size: 0.8rem;
 }
 
-.brandName h2 {
+.brandName h1 {
     font-size: 2.2rem;
     line-height: 1.2;
     font-family: 'MonteCarlo', cursive;
     font-weight: 100;
 }
 
-.brandName h4 {
+.brandName h2 {
     font-size: 0.9rem;
     font-weight: 400;
     opacity: 0.9;
@@ -158,7 +158,7 @@ a{
     color: var(--placeholder-bg);
 }
 
-/* CONFIGURAÇÕES DO DROPDOWN */
+/* CONFIG DO DROPDOWN */
 .dropdown-wrapper {
     position: relative;
     display: inline-block;
@@ -337,7 +337,7 @@ a{
     text-decoration: underline;
 }
 
-/* Animação suave de surgimento */
+/* Animação suave de FadeIn */
 @keyframes fadeInDropdown {
     from {
         opacity: 0;
@@ -360,7 +360,7 @@ a{
     gap: 15px;
     padding: 12px 10px;
     flex-wrap: wrap;
-    background: rgba(216, 203, 203, 0.3);
+    background: rgba(190, 165, 110, 0.3);
     backdrop-filter: blur(5px);
     border-bottom: 1px solid rgba(189, 243, 139, 0.2);
 }
@@ -517,7 +517,7 @@ a{
 }
 
 .productCard {
-    background: var(--text-color);
+    background: var(--sub-menu-color);
     flex: 1;
     min-width: 220px;
     max-width: 260px;
@@ -527,12 +527,18 @@ a{
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
     display: flex;
     flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.2s ease-in-out;
 }
 
 .productCard:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    color: var(--bg-light);
+}
+
+.productCard p {
+    text-align: center;
+    padding: 5px;
 }
 
 .productImagePlaceholder {
@@ -546,7 +552,26 @@ a{
     font-size: 1.1rem;
 }
 
-/* Botão de navegação lateral da vitrine */
+.productCardImage {
+    width: 100%;
+    height: 200px; /* Ou a altura que preferir para a vitrine */
+    overflow: hidden;
+    border-radius: 15px 15px 0 0; /* Arredonda só o topo do card */
+    background-color: var(--placeholder-bg);
+}
+
+.productImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem preencher o espaço sem distorcer */
+    transition: transform 0.3s ease;
+}
+
+.productCard:hover .productImg {
+    transform: scale(1.05); /* Efeito sutil de zoom ao passar o mouse */
+}
+
+/* Botão lateral da vitrine */
 .vitrineNextBtn {
     background: rgba(255, 255, 255, 0.8);
     border: none;
@@ -569,7 +594,7 @@ a{
 
 /* FOOTER */
 .footer {
-    background: #666;
+    background: #818078;
     display: flex;
     justify-content: center;
 }
@@ -598,12 +623,12 @@ a{
 }
 
 .socialMediaIcons a {
-    color: var(--text-color);
+    color: var(--main-color);
     font-size: 1.2rem;
     transition: color 0.2s;
 }
 
-/* Responsividade Avançada e Otimizada */
+/* Responsividade */
 @media (max-width: 768px) {
     /* Header & Navbar */
     .headerContainer {
@@ -698,7 +723,7 @@ a{
     }
 }
 
-/* Pequeno ajuste extra para telas muito pequenas (smartphones compactos) */
+/* Ajuste para telas muito pequenas */
 @media (max-width: 480px) {
     .cartItemActions {
         flex-direction: column;
@@ -784,7 +809,7 @@ a{
     background: var(--sub-menu-color);
 }
 
-/* --- CONFIGURAÇÕES GERAIS DO LAYOUT DO CARRINHO --- */
+/* CONFIGURAÇÕES GERAIS DO LAYOUT DO CARRINHO */
 .cartContainerMain {
     width: 90%;
     max-width: 1200px;
@@ -804,10 +829,10 @@ a{
     display: flex;
     gap: 30px;
     align-items: flex-start;
-    flex-wrap: wrap; /* Garante que caia para uma coluna no mobile */
+    flex-wrap: wrap; /* Garante uma coluna no mobile */
 }
 
-/* --- COLUNA ESQUERDA: LISTA --- */
+/* COLUNA ESQUERDA: LISTA */
 .cartItemsSection {
     flex: 2;
     min-width: 320px;
@@ -957,7 +982,7 @@ a{
     transform: translateX(-5px);
 }
 
-/* --- COLUNA DIREITA: RESUMO --- */
+/*  COLUNA DIREITA - RESUMO */
 .cartSummaryAside {
     flex: 1;
     min-width: 300px;
@@ -986,7 +1011,7 @@ a{
 }
 
 .freeShippingText {
-    color: #2e7d32; /* Verde para destacar gratuidade */
+    color: #2e7d32;
     font-weight: 700;
 }
 
@@ -1061,6 +1086,7 @@ a{
 .sobreContainer {
     max-width: 800px;
     margin: 0 auto;
+    height: 48.6vh;
 }
 
 .sobreContainer h1 {
